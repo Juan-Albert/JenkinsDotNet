@@ -1,6 +1,8 @@
 pipeline {
 	agent any
-	
+	environment {
+        dotnet = 'C:\Program Files\dotnet'
+    }
 	stages {
 		stage('Checkout') {
 			steps {
@@ -17,7 +19,7 @@ pipeline {
 		
 		stage('Test') {
             steps {
-                bat "dotnet test --configuration Release --no-build --logger trx --results-directory TestResults"
+                bat "%dotnet% test --configuration Release --no-build --logger trx --results-directory TestResults"
             }
         }
         
