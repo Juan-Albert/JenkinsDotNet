@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('Checkout') {
 			steps {
-				bat "git clone https://github.com/Javierdds/JenkinsDotNet.git ."
+				bat "git clone https://github.com/Juan-Albert/JenkinsDotNet.git ."
 			}
 		}
 	}
